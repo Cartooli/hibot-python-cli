@@ -1,4 +1,2 @@
 /* Hi Bot Code — Hi Bot / hibot.space-aligned layer (load after /assets/fonts/fonts.css) */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
-
-/* Syne is display; DM Sans remains primary UI from fonts.css */
+/* Display headings use Outfit (self-hosted in fonts.css); no third-party font requests. */

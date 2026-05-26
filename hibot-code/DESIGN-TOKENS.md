@@ -1,6 +1,6 @@
 # Hi Bot Code — design tokens (aligned with [hibot.space](https://hibot.space/))
 
-This fork matches the **Hi, Bot** marketing site family: near-black canvas, warm off-white type, **amber** accent, editorial section kickers, and Syne + DM Sans typography (per production Tailwind build on hibot.space).
+This fork matches the **Hi, Bot** marketing site family: near-black canvas, warm off-white type, **amber** accent, editorial section kickers, and **Outfit** + DM Sans typography (display and UI fonts are self-hosted under `/assets/fonts/`).
 
 ## Brand
 
@@ -25,16 +25,16 @@ This fork matches the **Hi, Bot** marketing site family: near-black canvas, warm
 | Border | `rgba(139, 149, 161, 0.22)` | Default hairlines |
 | Border hover | `rgba(139, 149, 161, 0.45)` | Interactive |
 
-**Divergence for a11y:** Interactive green from the old “Web Studio” was replaced system-wide with amber to stay on-brand; focus rings use amber at ~40% opacity like hibot’s `ring-amber/40`.
+**Divergence for a11y:** Legacy mint hover (`#2fc97e`) on amber CTAs was replaced with a darker amber (`#e19412`) so hovers stay on-brand. Focus rings use amber at ~40% opacity like hibot’s `ring-amber/40`.
 
 ## Typography
 
 | Role | Stack |
 |------|--------|
-| Display (H1–H3, logo) | **Syne** — weights 600–800 |
+| Display (H1–H3, logo) | **Outfit** — weights 500–800 (self-hosted in `assets/fonts/fonts.css`) |
 | UI / body | **DM Sans** — 400–700 (self-hosted under `/assets/fonts/`) |
 
-Syne loads via Google Fonts CSS in `assets/hibot-theme.css` (`@import`). DM Sans remains local from `assets/fonts/fonts.css`.
+`assets/hibot-theme.css` carries theme alignment notes only (no remote `@import`), so first-party pages avoid third-party font requests when paired with local `@font-face` rules.
 
 ## Layout & rhythm
 
