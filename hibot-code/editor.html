@@ -94,7 +94,7 @@
  --ok:#10b981;
  --warn:#f59e0b;
  --err:#ef4444;
- --primary:#1d4ed8; /* Primary button color */
+ --primary:#e69400; /* Primary button color — amber to match accent */
  --tooltip-bg:#1f2937; /* Tooltip background */
  --tooltip-text:#e5e7eb; /* Tooltip text */
  --border:rgba(168,181,201,.3); /* More visible borders */
@@ -275,7 +275,7 @@
  }
  .btn:hover{background:rgba(168,181,201,.25);border-color:var(--accent)}
  .btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px;box-shadow:0 0 0 3px rgba(245,165,36,0.2)}
- .btn.primary{background:var(--primary);border-color:var(--primary);color:#ffffff;font-weight:600} /* v2.2.1: Fixed contrast */
+ .btn.primary{background:var(--primary);border-color:var(--primary);color:#1a0800;font-weight:600} /* amber primary: dark text for 9.2:1 contrast */
  .btn.primary:hover{filter:brightness(1.05)}
  .btn.good{background:var(--ok);border-color:var(--ok);color:#062814;font-weight:600}
  .btn.warn{background:var(--warn);border-color:var(--warn);color:#211600;font-weight:600}
@@ -2206,18 +2206,18 @@ white-space:nowrap;
  transform-origin: top left;
  }
 
- /* Dark mode for editor UI */
- body.light-mode{
- --bg:#f1f5f9;
- --ink:#0f172a;
- --muted:#64748b;
- --accent:#22c55e;
- --panel:#ffffff;
- --panel-ink:#0f172a;
- --code-bg:#f8fafc;
- --code-ink:#1e293b;
- --code-muted:#64748b;
- --primary:#1d4ed8;
+/* Dark mode for editor UI */
+body.light-mode{
+--bg:#f1f5f9;
+--ink:#0f172a;
+--muted:#64748b;
+--accent:#d97706;
+--panel:#ffffff;
+--panel-ink:#0f172a;
+--code-bg:#f8fafc;
+--code-ink:#1e293b;
+--code-muted:#64748b;
+--primary:#d97706;
  --tooltip-bg:#1e293b;
  --tooltip-text:#f1f5f9;
  --border:rgba(15,23,42,.15);
