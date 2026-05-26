@@ -1239,10 +1239,11 @@ transform: scale(1.05);
  gap:0;
  min-width:min-content;
  }
- .mobile-tab{
- flex:1;
- min-width:100px;
- padding:14px 20px;
+.mobile-tab{
+flex:1;
+min-width:100px;
+min-height:44px; /* WCAG 44px minimum touch target */
+padding:15px 20px;
  background:transparent;
  border:none;
  color:var(--muted);
