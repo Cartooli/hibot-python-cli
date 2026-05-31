@@ -602,6 +602,8 @@ color-scheme:dark; /* FINDING-006: native browser UI renders in dark mode by def
  transition:color .12s, background .12s, border-color .12s;
  min-height:28px; white-space:nowrap; appearance:none;
  }
+ /* Comfortable touch targets on touch devices (mouse stays compact). */
+ @media (pointer: coarse){ .editor-tab{ min-height:44px; } }
  .editor-tab:hover{color:var(--ink);background:rgba(255,255,255,.05);}
  .editor-tab[data-lang="full"].active{color:var(--ink);background:var(--code-bg);border-color:var(--border);}
  .editor-tab[data-lang="html"].active{color:#f97316;border-color:rgba(249,115,22,.35);background:rgba(249,115,22,.07);}
@@ -2485,6 +2487,7 @@ color-scheme:light; /* FINDING-006: native browser UI (scrollbars, inputs) rende
  border-radius: 50%;
  width: 24px;
  height: 24px;
+ position: relative;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -2497,7 +2500,15 @@ flex-shrink: 0;
  min-width: 24px;
  min-height: 24px;
  }
- 
+ /* Extend the clickable area to 44px without enlarging the visible circle. */
+ .toast-close::before {
+ content: "";
+ position: absolute;
+ top: 50%; left: 50%;
+ width: 44px; height: 44px;
+ transform: translate(-50%, -50%);
+ }
+
  .toast-close:hover {
  background: rgba(255,255,255,0.3);
  transform: scale(1.1);
