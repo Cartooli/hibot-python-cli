@@ -1099,13 +1099,13 @@ border-radius:6px; border:1px solid rgba(245,165,36,0.3); line-height:var(--lead
  text-transform:uppercase; letter-spacing:0.5px;
  }
  .template-card .difficulty-beginner{
- background:#10b981; color:#fff;
+ background:#047857; color:#fff;
  }
  .template-card .difficulty-intermediate{
- background:#f59e0b; color:#fff;
+ background:#b45309; color:#fff;
  }
  .template-card .difficulty-advanced{
- background:#ef4444; color:#fff;
+ background:#b91c1c; color:#fff;
  }
  .template-card .feature-tags{
  display:flex; flex-wrap:wrap; gap:4px; margin-top:8px;
@@ -18259,9 +18259,11 @@ padding: ${padding}px;`;
  }
  });
  
- // Insert before the fullscreen button
+ // Insert before the fullscreen button, but only if it actually lives in
+ // this bar — otherwise insertBefore throws (NotFoundError) and the button
+ // never gets added.
  const fullscreenBtn = document.getElementById('btnFullscreen');
- if (fullscreenBtn) {
+ if (fullscreenBtn && fullscreenBtn.parentNode === previewBar) {
  previewBar.insertBefore(btn, fullscreenBtn);
  } else {
  previewBar.appendChild(btn);
