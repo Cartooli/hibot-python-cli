@@ -3,6 +3,11 @@
 Canonical version lives in [`VERSION`](VERSION); the service worker
 (`sw.js`) cache key must match it on every release.
 
+## Version 2.13.7 — Viewer download HTML (June 2026)
+
+- **Viewer:** **Download HTML** toolbar button saves `hibot-preview.html` — same assembled document as the live sandbox preview (`buildDoc()`), for email or attachment handoff. Meta description updated (download + PDF; still no account).
+- **PWA:** `VERSION` and `sw.js` `CACHE_NAME` bumped to `2.13.7` / `bws-v2.13.7`; `viewer.html` / `editor.html` favicon cache-bust query aligned.
+
 ## Unreleased
 
 - **Content (cross-link sweep):** Six AI-cluster sibling pages now link to the new `ai-build-stack.html` in both their nav and footer — `ai-coding-landscape-2026.html`, `cursor-slack-github.html`, `get-started-coding.html`, `how-backends-work-vercel-railway.html`, `ai-roi-calculator.html`, `pull-requests-github.html`. The page is now reachable from every adjacent AI/dev-tooling page, not just `index.html`.
