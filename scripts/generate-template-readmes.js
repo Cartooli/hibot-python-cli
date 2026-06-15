@@ -57,7 +57,7 @@ async function main() {
   for (const template of templates) {
     const { id, name, repo } = template;
     const readme = generateReadme(template);
-    const repoPath = path.join(__dirname, '../../starter-templates', name);
+    const repoPath = path.join(__dirname, '../starter-templates', name);
     const readmePath = path.join(repoPath, 'README.md');
 
     if (dryRun) {
@@ -71,7 +71,8 @@ async function main() {
     if (push) {
       // Verify repo directory exists
       if (!fs.existsSync(repoPath)) {
-        console.error(`❌ Error: ${repoPath} not found`);
+        console.error(`❌ Error: repo directory not found at ${repoPath}`);
+        console.error(`Make sure starter-templates/ exists and contains the repos.`);
         process.exit(1);
       }
 
