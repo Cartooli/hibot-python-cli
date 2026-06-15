@@ -176,6 +176,30 @@
     .note { max-width: 760px; margin: 8px auto 0; padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: rgba(255,255,255,.02); color: var(--muted); font-size: 13px; line-height: 1.6; }
     .note strong { color: var(--ink); }
 
+    /* Cursor CTA band */
+    .cta-band { max-width: 880px; margin: 0 auto; padding: 28px 24px; }
+    .cta-card { background: linear-gradient(180deg, var(--accent-dim), rgba(245,165,36,.03)); border: 1px solid rgba(245,165,36,.3); border-radius: var(--radius); padding: 30px 26px; text-align: center; }
+    .cta-card h2 { margin: 2px 0 10px; }
+    .cta-card p { color: var(--muted); margin: 0 auto 18px; max-width: 580px; line-height: 1.7; }
+    .cta-card p strong { color: var(--ink); }
+    .cta-actions { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .disclosure-inline { color: var(--muted); font-size: 12px; margin: 0; }
+    .disclosure-inline a { color: inherit; text-decoration: underline; }
+    .nudge { font-size: 0.95rem; color: var(--muted); margin: 6px 0 0; }
+
+    /* Further reading grid */
+    .reads { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 8px; }
+    .read-card { display: block; background: var(--panel-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; text-decoration: none; transition: border-color .15s, transform .15s; }
+    .read-card:hover { border-color: var(--accent-soft); transform: translateY(-2px); }
+    .read-card b { font-family: var(--font-display); color: var(--ink); font-size: 1rem; display: block; margin-bottom: 3px; font-weight: 700; }
+    .read-card span { color: var(--muted); font-size: 0.9rem; }
+    .read-card .arrow { color: var(--accent); }
+    @media (max-width: 640px) { .reads { grid-template-columns: 1fr; } }
+
+    /* Affiliate disclosure block */
+    .disclosure { max-width: 760px; margin: 26px auto 0; padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: rgba(255,255,255,.02); color: var(--muted); font-size: 13px; line-height: 1.55; text-align: left; }
+    .disclosure strong { color: var(--ink); }
+
     /* Footer */
     footer { border-top: 1px solid var(--border); padding: 28px 24px; text-align: center; color: var(--muted); font-size: 13px; line-height: 2; }
     footer a { color: var(--muted); text-decoration: none; padding: 12px 14px; display: inline-block; min-height: 44px; line-height: 1.5; }
@@ -295,10 +319,23 @@
     <p class="note" style="margin-top:18px;"><strong>Note for instructors:</strong> a few sample apps below were originally wired to a different model provider. The lesson teaches the Claude pattern; swapping providers is a one-function change, so use them as-is and point out where the model call lives.</p>
   </section>
 
+  <section class="cta-band" aria-labelledby="startcta-h">
+    <div class="cta-card">
+      <span class="kicker">From reference app to your own</span>
+      <h2 id="startcta-h">Not sure where to start? Start here.</h2>
+      <p>A reference app shows you what's possible. <strong>Cursor</strong> — an AI code editor — is the fastest way to go from idea to a deployed app: you describe what you want and it writes and edits the code alongside you. New builders get <strong>50% off their first month</strong> through our link.</p>
+      <div class="cta-actions">
+        <a href="https://cursor.com/referral?code=6FIM46PRQZQB" class="btn btn-primary" target="_blank" rel="sponsored noopener">Start with Cursor — 50% off →</a>
+        <p class="disclosure-inline"><a href="#disclosure">ⓘ&nbsp;Affiliate disclosure</a></p>
+      </div>
+    </div>
+  </section>
+
   <section id="projects" class="wrap">
     <span class="kicker">The 10 projects</span>
     <h2>From one HTML file to a full AI app</h2>
     <p>Ordered easiest to hardest. The first four need no build step at all; the last five are full Next.js apps. Pick the rung that matches your class.</p>
+    <p class="nudge">New to this? <a href="https://cursor.com/referral?code=6FIM46PRQZQB" target="_blank" rel="sponsored noopener">Set up Cursor first →</a> — it'll write the first version with you.</p>
     <nav class="toc" aria-label="Project list">
       <a href="#p1">1 · BeeSPelling</a>
       <a href="#p2">2 · Crosswordy</a>
@@ -561,11 +598,32 @@
     </div>
   </section>
 
+  <section class="wrap" aria-labelledby="reading-h">
+    <span class="kicker">Before you start · Keep learning</span>
+    <h2 id="reading-h">Guides to get you building</h2>
+    <p>Short, practical reads from this site — set up your tools and ship your first app fast.</p>
+    <div class="reads">
+      <a class="read-card" href="get-started-coding.html"><b>Get Started Coding <span class="arrow">→</span></b><span>New to all this? Start here.</span></a>
+      <a class="read-card" href="ai-build-stack.html"><b>The AI Build Stack <span class="arrow">→</span></b><span>The full stack, tool by tool.</span></a>
+      <a class="read-card" href="cursor-slack-github.html"><b>Cursor + GitHub <span class="arrow">→</span></b><span>Wire Cursor to GitHub and ship.</span></a>
+      <a class="read-card" href="ai-coding-landscape-2026.html"><b>AI Coding Guide <span class="arrow">→</span></b><span>How the AI coding tools compare.</span></a>
+      <a class="read-card" href="pull-requests-github.html"><b>Pull Requests <span class="arrow">→</span></b><span>Save and publish your work.</span></a>
+      <a class="read-card" href="how-backends-work-vercel-railway.html"><b>Vercel vs Railway <span class="arrow">→</span></b><span>Where your app actually runs.</span></a>
+    </div>
+  </section>
+
   <section class="final">
     <h2>Pick one and start building</h2>
-    <p>Open the live sample, see how it behaves, then open a blank editor and rebuild it your way. Start at project one if you're new — it's just one file.</p>
-    <a href="editor.html" class="btn btn-primary">Open the editor →</a>
+    <p>Open the live sample, see how it behaves, then rebuild it your way. New builders: let Cursor write the first version with you — <strong>50% off your first month</strong> through our link.</p>
+    <div class="cta-actions" style="flex-direction:row;flex-wrap:wrap;justify-content:center;">
+      <a href="https://cursor.com/referral?code=6FIM46PRQZQB" class="btn btn-primary" target="_blank" rel="sponsored noopener">Get Cursor — 50% off your first month →</a>
+      <a href="editor.html" class="btn btn-ghost">Or open a blank editor</a>
+    </div>
+    <p class="disclosure-inline" style="margin-top:12px;"><a href="#disclosure">ⓘ&nbsp;Affiliate disclosure</a></p>
     <p class="note" style="margin-top:24px;"><strong>About these samples:</strong> all ten are independently built, deployed apps featured on <a href="https://vibeshare.site" target="_blank" rel="noopener">vibeshare.site</a> and <a href="https://emergetech.online" target="_blank" rel="noopener">emergetech.online</a>. They're shown here as reference material — study them, don't copy their code.</p>
+    <div id="disclosure" class="disclosure">
+      <strong>Disclosure:</strong> The Cursor links on this page are referral links — new users get <strong>50% off their first month</strong> when they sign up through them, and code.hibot.space may earn a commission at no additional cost to you. This helps keep these guides free. Every other link on this page is a clean URL with no referral code.
+    </div>
   </section>
 
 </main>
