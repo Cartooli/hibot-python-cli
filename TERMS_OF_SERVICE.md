@@ -4,7 +4,7 @@
 
 **Software:** [YOUR APP NAME]
 **Author:** Hi, Bot
-**Contact:** rob@cartooli.com
+**Contact:** open a GitHub Issue at https://github.com/Cartooli/hibot-python-cli/issues (no public email)
 **Last updated:** [DATE]
 
 ## 1. What this is
@@ -20,4 +20,4 @@ The software is provided "as is," without warranty of any kind. To the extent pe
 Use it lawfully. Don't represent modified copies as the original.
 
 ## 5. Contact
-Questions? Email rob@cartooli.com.
+Questions? Open a GitHub Issue at https://github.com/Cartooli/hibot-python-cli/issues.
