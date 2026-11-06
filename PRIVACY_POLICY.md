@@ -4,7 +4,7 @@
 
 **Software:** [YOUR APP NAME]
 **Author:** Hi, Bot
-**Contact:** rob@cartooli.com
+**Contact:** open a GitHub Issue at https://github.com/Cartooli/hibot-python-cli/issues (no public email)
 **Last updated:** [DATE]
 
 ## What we collect
@@ -17,4 +17,4 @@ If you add networking, file saving, accounts, or third-party services, update th
 General-audience; collects no information from anyone, including children.
 
 ## Contact
-Questions? Email rob@cartooli.com.
+Questions? Open a GitHub Issue at https://github.com/Cartooli/hibot-python-cli/issues.
